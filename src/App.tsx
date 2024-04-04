@@ -1,5 +1,6 @@
-import ConheçaINS from "./Body/ConheçaINS/ConheçaINS";
+import ConheçaINS from "./Body/ConheçaINS/ConheçaINSSection";
 import SejaQuem from "./Body/SejaQuem";
+import ServicesSection from "./Body/Serviços/ServicesSection";
 import Slider from "./Body/Slider";
 import Header from "./Header/Header";
 
@@ -10,6 +11,7 @@ function App() {
       <SejaQuem />
       <Slider />
       <ConheçaINS />
+      <ServicesSection />
     </>
   );
 }

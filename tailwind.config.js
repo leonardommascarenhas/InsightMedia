@@ -3,6 +3,9 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      gridTemplateAreas: {
+        serviceSecondLayout: ["serviceItem1 serviceItem2", "serviceItem3 serviceItem3"],
+      },
       colors: {
         mainOrange: "#e84e0e",
       },
@@ -14,5 +17,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@savvywombat/tailwindcss-grid-areas")],
 };
