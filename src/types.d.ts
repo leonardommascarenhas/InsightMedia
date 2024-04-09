@@ -6,6 +6,7 @@ declare global {
     title: string;
     description: string;
   }[];
+  type ServiceBackgrounds = "planejamentoMidia" | "inteligenciaDados";
 }
 
 export {};

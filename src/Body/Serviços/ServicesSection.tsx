@@ -52,11 +52,14 @@ const ServicesSection = () => {
   return (
     <section>
       <ServiceArticle
+        iconImgSrc="planejamentoDigital/icon.png"
         backgroundName="planejamentoMidia"
         title="Planejamento de Mídia Digital"
         arrayOfServiceItems={midiaDigitalPlanning}
       />
       <ServiceArticle
+        description="Ferramentas para análise de audiência, comportamento e consumo."
+        iconImgSrc="InteligenciaDados/icon.png"
         backgroundName="inteligenciaDados"
         title="Inteligência De Dados"
         arrayOfServiceItems={dataInteligence}
