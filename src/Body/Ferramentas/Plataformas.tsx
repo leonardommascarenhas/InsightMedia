@@ -1,17 +1,14 @@
 import { useEffect, useState } from "react";
 
+const importAll = (r: any) => r.keys().map(r);
+const images = importAll(require.context("/public/assets/SocialMedias", false, /\.(png|jpe?g|svg)$/));
+
 const Plataformas = () => {
   const [imageNames, setImageNames] = useState<string[]>([]);
 
   useEffect(() => {
-    const fetchImageNames = async () => {
-      const images = import.meta.glob("/assets/SocialMedias/*");
-      const imageKeys = Object.keys(images);
-
-      setImageNames(imageKeys);
-    };
-
-    fetchImageNames();
+    const imageKeys = images.map((image: any) => image.default);
+    setImageNames(imageKeys);
   }, []);
 
   return (
@@ -25,6 +22,7 @@ const Plataformas = () => {
             <img
               key={index}
               src={name}
+              alt={`Social Media ${index}`}
               className="w-12 h-12 lg:w-24 lg:h-12 object-contain lg:m-6"
             />
           ))}
