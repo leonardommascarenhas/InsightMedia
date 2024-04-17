@@ -1,30 +1,38 @@
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import { useSwiper } from "swiper/react";
 
-// Import Swiper styles
 import "swiper/css";
 
 const Slider = () => {
-  const swiper = useSwiper();
+  const images = Array.from({ length: 32 }, (_, index) => index + 1);
   return (
     <Swiper
       modules={[Navigation]}
       spaceBetween={30}
-      slidesPerView={5}
-      navigation
+      breakpoints={{ 640: { slidesPerView: 3 } }}
+      slidesPerView={4}
+      navigation={{
+        prevEl: ".custom-prev",
+        nextEl: ".custom-next",
+      }}
+      className="relative  py-8 lg:py-24"
     >
-      <SwiperSlide>Slide 1</SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
-      <button className="swiper-button-prev" onClick={() => swiper.slidePrev()}>
+      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 custom-prev z-10">
         <FaArrowLeft />
-      </button>
-      <button className="swiper-button-next" onClick={() => swiper.slideNext()}>
+      </div>
+      <div className="absolute right-0 top-1/2 transform -translate-y-1/2 custom-next z-10">
         <FaArrowRight />
-      </button>
+      </div>
+      {images.map((number) => (
+        <SwiperSlide key={number}>
+          <img
+            src={`/assets/Clients/${number}.png`}
+            alt={`Image ${number}`}
+            className="h-16 w-16 lg:w-24 xl:w-32 lg:h-24 xl:h-32 object-contain"
+          />
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 };
