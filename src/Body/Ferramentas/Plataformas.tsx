@@ -5,7 +5,7 @@ const Plataformas = () => {
 
   useEffect(() => {
     const fetchImageNames = async () => {
-      const images = import.meta.glob("/public/assets/SocialMedias/*");
+      const images = import.meta.glob("../../../public/assets/SocialMedias/*");
       const imageKeys = Object.keys(images);
 
       setImageNames(imageKeys);
