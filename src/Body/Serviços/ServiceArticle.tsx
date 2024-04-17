@@ -24,7 +24,7 @@ const ServiceArticle = ({ iconImgSrc, description, backgroundName, title, arrayO
     >
       <div>
         <h2 className="w-full md:w-5/12 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold ">
-          <img src={`/assets/Serviços/${iconImgSrc}`} />
+          <img src={`/src/assets/Serviços/${iconImgSrc}`} />
           {title}
         </h2>
         <p>{description}</p>

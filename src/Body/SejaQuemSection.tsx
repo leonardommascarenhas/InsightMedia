@@ -5,7 +5,7 @@ const SejaQuemSection = () => {
       className="h-[320px] md:h-[90vh] mt-20 md:mt-[10vh]"
     >
       <img
-        src="/assets/SejaQuem.png"
+        src="/src/assets/SejaQuem.png"
         className="w-full h-full object-cover"
       />
     </section>
