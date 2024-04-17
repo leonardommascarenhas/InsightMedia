@@ -5,7 +5,7 @@ const Plataformas = () => {
 
   useEffect(() => {
     const fetchImageNames = async () => {
-      const imageKeys = Object.keys(import.meta.glob("/src/assets/SocialMedias/*", { eager: true, as: "raw" }));
+      const imageKeys = Object.keys(import.meta.glob("/public/assets/SocialMedias/*", { eager: true, as: "raw" }));
 
       setImageNames(imageKeys);
     };

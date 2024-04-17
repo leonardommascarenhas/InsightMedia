@@ -11,8 +11,8 @@ module.exports = {
         mainYellow: "#f7a600",
       },
       backgroundImage: {
-        planejamentoMidia: "url('/src/assets/backgrounds/Serviços/PlanejamentoMidia.png')",
-        dataIntelligence: "url('/src/assets/backgrounds/Serviços/InteligenciaDados.png')",
+        planejamentoMidia: "url('/assets/backgrounds/Serviços/PlanejamentoMidia.png')",
+        dataIntelligence: "url('/assets/backgrounds/Serviços/InteligenciaDados.png')",
       },
       fontFamily: {
         sora: ["Sora", "sans-serif"],

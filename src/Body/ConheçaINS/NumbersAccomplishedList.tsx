@@ -21,7 +21,7 @@ const NumbersAccomplishedList = () => {
         ))}
       </div>
       <img
-        src="/src/assets/Brasil.png"
+        src="/assets/Brasil.png"
         alt=""
         className="hidden md:block absolute -top-14 -right-20 h-full z-20"
         style={{ maxHeight: "calc(100% + 75px)", height: "auto", width: "auto" }}

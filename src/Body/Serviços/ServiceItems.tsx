@@ -14,7 +14,7 @@ const ServiceItems = ({ imgSrc, color, title, description }: ServiceItemsProps) 
   return (
     <div className="flex flex-col items-center justify-center p-4 md:p-6 lg:p-8">
       <img
-        src={`/src/assets/Serviços/${imgSrc}`}
+        src={`/assets/Serviços/${imgSrc}`}
         className="w-12 h-12 mb-4"
         alt={title}
       />
