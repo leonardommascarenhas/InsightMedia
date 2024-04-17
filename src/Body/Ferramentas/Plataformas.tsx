@@ -1,17 +1,5 @@
-import { useEffect, useState } from "react";
-
 const Plataformas = () => {
-  const [imageNames, setImageNames] = useState<string[]>([]);
-
-  useEffect(() => {
-    const fetchImageNames = async () => {
-      const imageKeys = Object.keys(import.meta.glob("/src/assets/SocialMedias/*", { eager: true, as: "raw" }));
-
-      setImageNames(imageKeys);
-    };
-
-    fetchImageNames();
-  }, []);
+  const imageNames = Array.from({ length: 19 }, (_, index) => index + 1);
 
   return (
     <>
@@ -20,11 +8,11 @@ const Plataformas = () => {
           PROGRAMATICA SOCIAL
         </h4>
         <div className="grid grid-rows-4 grid-flow-col w-full justify-evenly">
-          {imageNames.map((name, index) => (
+          {imageNames.map((number, index) => (
             <img
               key={index}
-              src={name}
-              className="w-12 h-12 lg:w-24 lg:h-12 object-contain lg:m-6"
+              src={`/assets/SocialMedias/${number}.png`}
+              className="w-12 h-12 lg:w-16 lg:h-16 object-contain lg:m-4"
             />
           ))}
         </div>
