@@ -2,8 +2,12 @@ import { Associate } from "./Associate";
 
 const Modal = () => {
   return (
-    <div className="bg-white rounded-lg shadow-xl p-4 w-11/12 sm:w-5/6 md:w-2/3  xl:w-2/3 2xl:w-1/2 text-justify">
-      <blockquote className="text-xl md:text-2xl lg:text-2xl xl:text-3xl text-gray-800">
+    <div className="relative bg-white rounded-2xl shadow-2xl pt-6 pb-8 px-4 md:pt-8 md:pb-12 lg:p-16 w-11/12 sm:w-5/6 xl:w-2/3 2xl:w-1/2 text-justify ">
+      <blockquote className="flex md:text-2xl lg:text-2xl text-gray-800">
+        <img
+          src="/assets/test.png"
+          className="h-3 lg:h-1/5 lg:w-1/5 lg:mr-6"
+        />
         <p>
           A experiência com a agência digital foi excepcional! O atendimento personalizado e a abordagem centrada nas
           necessidades do cliente destacam-se positivamente. A equipe demonstrou expertise em entender nossos objetivos,
