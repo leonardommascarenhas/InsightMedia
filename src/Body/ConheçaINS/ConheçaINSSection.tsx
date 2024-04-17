@@ -2,7 +2,7 @@ import NumbersAccomplishedList from "./NumbersAccomplishedList";
 
 const ConheçaINS = () => {
   return (
-    <section className="flex flex-col items-center justify-center font-sora">
+    <section className="flex flex-col items-center justify-center">
       <h2 className="flex items-end gap-3 font-extrabold text-4xl xl:text-5xl 2xl:text-7xl -tracking-widest lg:-tracking-wide text-mainOrange">
         CONHEÇA A <img src="/assets/LOGO_TOPO.png" />
       </h2>

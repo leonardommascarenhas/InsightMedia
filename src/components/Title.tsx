@@ -3,7 +3,11 @@ type TitleProps = {
 };
 
 const Title = ({ title }: TitleProps) => {
-  return <h1 className=" text-mainOrange font-extrabold text-6xl tracking-tight leading-10 font-sora">{title}</h1>;
+  return (
+    <h1 className="text-center my-4 sm:my-8 md:my-12 text-mainOrange font-extrabold text-6xl tracking-tight leading-10 ">
+      {title}
+    </h1>
+  );
 };
 
 export default Title;
