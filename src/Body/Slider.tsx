@@ -10,13 +10,18 @@ const Slider = () => {
     <Swiper
       modules={[Navigation]}
       spaceBetween={30}
-      breakpoints={{ 640: { slidesPerView: 3 } }}
+      breakpoints={{
+        640: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+        1280: { slidesPerView: 5 },
+      }}
       slidesPerView={4}
       navigation={{
         prevEl: ".custom-prev",
         nextEl: ".custom-next",
       }}
-      className="relative  py-8 lg:py-24"
+      className="relative px-12  py-8 lg:py-24"
     >
       <div className="absolute left-0 top-1/2 transform -translate-y-1/2 custom-prev z-10">
         <FaArrowLeft />
