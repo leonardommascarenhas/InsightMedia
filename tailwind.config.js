@@ -9,6 +9,7 @@ module.exports = {
       colors: {
         mainOrange: "#f84e0a",
         mainYellow: "#f7a600",
+        formGray: " #eaeaea",
       },
       backgroundImage: {
         planejamentoMidia: "url('/assets/backgrounds/Serviços/PlanejamentoMidia.png')",
