@@ -52,17 +52,27 @@ const ServicesSection = () => {
   return (
     <section>
       <ServiceArticle
-        iconImgSrc="planejamentoDigital/icon.png"
+        iconImgSrc="planejamentoDigital/Icon.png"
+        backgroundMobile="planejamentoMidia"
         backgroundName="planejamentoMidia"
         title="Planejamento de Mídia Digital"
         arrayOfServiceItems={midiaDigitalPlanning}
       />
       <ServiceArticle
         description="Ferramentas para análise de audiência, comportamento e consumo."
-        iconImgSrc="InteligenciaDados/icon.png"
+        backgroundMobile="inteligenciaDados"
+        iconImgSrc="InteligenciaDados/Icon.png"
         backgroundName="inteligenciaDados"
         title="Inteligência De Dados"
         arrayOfServiceItems={dataInteligence}
+      />
+      <ServiceArticle
+        description="Seja através de campanhas personalizadas, otimização de mídia paga ou iniciativas de marketing de conteúdo, estamos aqui para impulsionar o crescimento do seu negócio. Nosso foco é tornar seus objetivos digitais uma
+        realidade palpável. Nosso time está pronto para atender seu projeto especial."
+        backgroundMobile="projetoEspecial"
+        iconImgSrc="ProjetoEspecial/Icon.png"
+        backgroundName="projetoEspecial"
+        title="Projetos Especiais"
       />
     </section>
   );

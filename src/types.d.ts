@@ -6,7 +6,7 @@ declare global {
     title: string;
     description: string;
   }[];
-  type ServiceBackgrounds = "planejamentoMidia" | "inteligenciaDados";
+  type ServiceBackgrounds = "planejamentoMidia" | "inteligenciaDados" | "projetoEspecial";
 }
 
 export {};
