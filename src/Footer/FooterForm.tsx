@@ -7,9 +7,9 @@ type FormData = {
   messagem: string;
 };
 
-type FormProps = {
-  onSubmit: (data: FormData) => void;
-};
+// type FormProps = {
+//   onSubmit: (data: FormData) => void;
+// };
 
 function ContactForm() {
   const [formData, setFormData] = useState<FormData>({
