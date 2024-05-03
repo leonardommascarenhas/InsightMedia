@@ -51,12 +51,16 @@ const dataInteligence: ArrayOfServiceItems = [
 const ServicesSection = () => {
   return (
     <section>
+      <div className="w-full flex justify-center items-center bg-mainOrange text-3xl py-6">
+        <h2 className="text-white font-black">SERVIÇOS</h2>
+      </div>
       <ServiceArticle
         iconImgSrc="planejamentoDigital/Icon.png"
         backgroundMobile="planejamentoMidia"
         backgroundName="planejamentoMidia"
         title="Planejamento de Mídia Digital"
         arrayOfServiceItems={midiaDigitalPlanning}
+        id="planejamentoDigital"
       />
       <ServiceArticle
         description="Ferramentas para análise de audiência, comportamento e consumo."
@@ -65,6 +69,7 @@ const ServicesSection = () => {
         backgroundName="inteligenciaDados"
         title="Inteligência De Dados"
         arrayOfServiceItems={dataInteligence}
+        id="inteligenciaDados"
       />
       <ServiceArticle
         description="Seja através de campanhas personalizadas, otimização de mídia paga ou iniciativas de marketing de conteúdo, estamos aqui para impulsionar o crescimento do seu negócio. Nosso foco é tornar seus objetivos digitais uma
@@ -73,6 +78,7 @@ const ServicesSection = () => {
         iconImgSrc="ProjetoEspecial/Icon.png"
         backgroundName="projetoEspecial"
         title="Projetos Especiais"
+        id="projetosEspeciais"
       />
     </section>
   );

@@ -13,6 +13,7 @@ function App() {
       <Header />
       <SejaQuemSection />
       <Slider />
+      <div className="h-[100px]" id="conhecaINS"></div>
       <ConheçaINS />
       <ServicesSection />
       <FeedbacksSection />

@@ -33,7 +33,7 @@ function ContactForm() {
   };
 
   return (
-    <div className="lg:absolute -top-12 right-12 my-8 lg:my-0 py-4 px-6 shadow-2xl rounded-3xl mx-4 xl:w-[446px] bg-white">
+    <div className="lg:absolute -top-12 right-12 my-8 lg:my-0 py-8 px-10 shadow-2xl rounded-3xl mx-4 xl:w-[446px] bg-white">
       <form
         onSubmit={handleSubmit}
         className="flex flex-col gap-3"
@@ -76,9 +76,9 @@ function ContactForm() {
         />
         <button
           type="submit"
-          className="bg-mainOrange mx-auto w-2/3 lg:w-80 text-black hover:bg-black hover:text-white transition-colors duration-500 rounded-3xl p-4"
+          className="bg-mainOrange font-black mx-auto w-2/3 lg:w-80 text-black hover:bg-black hover:text-white transition-colors duration-500 rounded-3xl p-4"
         >
-          SUBMIT
+          ENVIAR
         </button>
       </form>
     </div>

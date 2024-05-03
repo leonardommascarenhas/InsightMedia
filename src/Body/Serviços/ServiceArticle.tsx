@@ -7,6 +7,7 @@ interface ServiceProps {
   backgroundMobile: ServiceBackgrounds;
   title: string;
   arrayOfServiceItems?: ArrayOfServiceItems;
+  id?: string;
 }
 
 const ServiceArticle = ({
@@ -16,6 +17,7 @@ const ServiceArticle = ({
   backgroundMobile,
   title,
   arrayOfServiceItems,
+  id
 }: ServiceProps) => {
   const backgrounds: Record<ServiceBackgrounds, string> = {
     planejamentoMidia: "bg-planejamentoMidia",
@@ -34,6 +36,7 @@ const ServiceArticle = ({
 
   return (
     <article
+    id={id}
       className={`${mobileBackgrounds[backgroundMobile]} md:${backgrounds[backgroundName]} bg-cover bg-center  bg-opacity-20 p-6 flex flex-col md:flex-row items-center justify-center gap-6 text-white min-h-[480px]`}
     >
       <div>

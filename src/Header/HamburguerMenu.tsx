@@ -1,15 +1,35 @@
-import { IoIosMenu } from "react-icons/io";
+import Lottie, { LottieRefCurrentProps } from "lottie-react";
+import animationData from "../assets/animations/hamburguer_menu.json";
+import { useEffect, useRef, useState } from "react";
 
 const HamburguerMenu = () => {
+  const menuItems = [{title: "CONHEÇA A INS", link: "conhecaINS"}, {title: "TRADING", link: "planejamentoDigital"}, {title: "INTELIGÊNCIA DE DADOS", link: "inteligenciaDados"}, {title: "PROJETOS ESPECIAIS", link: "projetosEspeciais"}, {title: "FALE CONOSCO", link: "faleConosco"}];
+  const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef<LottieRefCurrentProps>(null)
+
+  useEffect(() => {
+    if (isOpen === false) {
+      menuRef.current?.setSpeed(3);
+      menuRef.current?.setDirection(-1);
+      menuRef.current?.play();
+    }
+  }, [isOpen])
   return (
-    <div className="group flex flex-col relative">
-      <IoIosMenu size={30} />
-      <ul className="absolute hidden group-hover:block top-full right-20 mt-2 z-10">
-        <li>CONHEÇA A INS</li>
-        <li>TRADING</li>
-        <li>INTELIGÊNCIA DE DADOS</li>
-        <li>PROJETO ESPECIAIS</li>
-        <li>FALE CONOSCO</li>
+    <div className={`flex flex-col relative ${isOpen ? 'pl-8 pb-12' : ''}`} onMouseEnter={() => setIsOpen(true)} onMouseLeave={() => setIsOpen(false)}>
+      <Lottie
+      autoplay={false}
+      loop={false}
+      className="cursor-pointer w-10"
+      onMouseEnter={() => {
+        menuRef.current?.setSpeed(3);
+        menuRef.current?.setDirection(1);
+        menuRef.current?.play();
+      }}
+      lottieRef={menuRef} 
+      animationData={animationData} 
+      />
+      <ul onMouseEnter={() => setIsOpen(true)} className={`absolute ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none invisible'} transition-all duration-500 top-[8vh] right-0 z-10 bg-mainOrange bg-opacity-70 py-8 px-10 w-fit`} >
+        {menuItems.map(({title, link}) => <li key={link} className="transition-all duration-200 text-white hover:text-orange-600 font-black whitespace-nowrap py-1 text-xl"><a href={`#${link}`}>{title}</a></li>)}
       </ul>
     </div>
   );

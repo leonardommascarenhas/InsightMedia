@@ -23,11 +23,11 @@ const Slider = () => {
       }}
       className="relative px-12  py-8 lg:py-24"
     >
-      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 custom-prev z-10">
-        <FaArrowLeft />
+      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 custom-prev z-10 p-3 bg-mainOrange opacity-70 hover:opacity-100 transition-all duration-200 active:bg-orange-700 ml-4 rounded-full cursor-pointer">
+        <FaArrowLeft className="text-white" />
       </div>
-      <div className="absolute right-0 top-1/2 transform -translate-y-1/2 custom-next z-10">
-        <FaArrowRight />
+      <div className="absolute right-0 top-1/2 transform -translate-y-1/2 custom-next z-10 p-3 bg-mainOrange opacity-70 hover:opacity-100 transition-all duration-200 active:bg-orange-700 mr-4 rounded-full cursor-pointer">
+        <FaArrowRight className="text-white" />
       </div>
       {images.map((number) => (
         <SwiperSlide key={number}>
