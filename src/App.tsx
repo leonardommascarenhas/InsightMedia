@@ -1,24 +1,32 @@
-import ConheçaINS from "./Body/ConheçaINS/ConheçaINSSection";
-import FeedbacksSection from "./Body/Feedbacks/Feedbacks";
-import FerramentasSections from "./Body/Ferramentas/FerramentasSections";
-import SejaQuemSection from "./Body/SejaQuemSection";
-import ServicesSection from "./Body/Serviços/ServicesSection";
-import Slider from "./Body/Slider";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
+import { Noticias } from "./Body/Blog/Noticias";
+import { PaginaDaNoticia } from "./Body/Blog/PaginaNoticia";
+import Home from "./Home";
 
 function App() {
   return (
     <>
-      <Header />
-      <SejaQuemSection />
-      <Slider />
-      <div className="h-[100px]" id="conhecaINS"></div>
-      <ConheçaINS />
-      <ServicesSection />
-      <FeedbacksSection />
-      <FerramentasSections />
-      <Footer />
+      <Router>
+        <Header />
+        <Routes>
+          <Route
+            path="/"
+            element={<Home />}
+          />
+          <Route
+            path="/noticias"
+            element={<Noticias />}
+          />
+          <Route
+            path="/noticias/:urlEncoded"
+            element={<PaginaDaNoticia />}
+          />
+        </Routes>
+        <Footer />
+      </Router>
     </>
   );
 }
