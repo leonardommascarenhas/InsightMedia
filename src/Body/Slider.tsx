@@ -32,7 +32,7 @@ const Slider = () => {
       {images.map((number) => (
         <SwiperSlide key={number}>
           <img
-            src={`/assets/Clients/${number}.png`}
+            src={`/assets/Clients/${number}.avif`}
             alt={`Image ${number}`}
             className="h-16 w-16 lg:w-24 xl:w-32 lg:h-24 xl:h-32 object-contain"
           />

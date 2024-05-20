@@ -11,7 +11,7 @@ const Plataformas = () => {
           {imageNames.map((number, index) => (
             <img
               key={index}
-              src={`/assets/SocialMedias/${number}.png`}
+              src={`/assets/SocialMedias/${number}.avif`}
               className="w-12 h-12 lg:w-16 lg:h-16 object-contain lg:m-4"
             />
           ))}

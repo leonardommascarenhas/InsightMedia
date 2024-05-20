@@ -12,11 +12,11 @@ module.exports = {
         formGray: " #eaeaea",
       },
       backgroundImage: {
-        planejamentoMidia: "url('/assets/backgrounds/Serviços/PlanejamentoMidia.png')",
-        dataIntelligence: "url('/assets/backgrounds/Serviços/InteligenciaDados.png')",
-        dataIntelligenceMobile: "url('/assets/backgrounds/Serviços/InteligenciaDadosMobile.png')",
-        projetoEspecialMobile: "url('/assets/backgrounds/Serviços/ProjetoEspecialMobile.png')",
-        projetoEspecial: "url('/assets/backgrounds/Serviços/ProjetoEspecial.png')",
+        planejamentoMidia: "url('/assets/backgrounds/Serviços/PlanejamentoMidia.avif')",
+        dataIntelligence: "url('/assets/backgrounds/Serviços/InteligenciaDados.avif')",
+        dataIntelligenceMobile: "url('/assets/backgrounds/Serviços/InteligenciaDadosMobile.avif')",
+        projetoEspecialMobile: "url('/assets/backgrounds/Serviços/ProjetoEspecialMobile.avif')",
+        projetoEspecial: "url('/assets/backgrounds/Serviços/ProjetoEspecial.avif')",
       },
       fontFamily: {
         sora: ["Sora", "sans-serif"],

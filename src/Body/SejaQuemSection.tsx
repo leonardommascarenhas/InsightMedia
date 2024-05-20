@@ -8,7 +8,7 @@ const SejaQuemSection = () => {
         Seja quem, quando,<br></br> como ou onde for, com<br></br> a IN*S sua campanha vai.
       </h1>
       <img
-        src="/assets/SejaQuem.png"
+        src="/assets/SejaQuem.avif"
         className="w-full h-full object-cover object-left"
       />
     </section>
