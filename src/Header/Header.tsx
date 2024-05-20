@@ -13,7 +13,7 @@ const Header = () => {
         <LogoTopoBlack className="h-full" />
         <Lottie
           lottieRef={headerBackground}
-          className="absolute -top-10"
+          className="hidden md:block absolute -top-10"
           autoplay
           loop
           animationData={animationData}
