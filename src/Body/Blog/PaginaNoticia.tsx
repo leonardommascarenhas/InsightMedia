@@ -29,7 +29,7 @@ export const PaginaDaNoticia: React.FC = () => {
 
   return (
     <div
-      className="lg:h-screen flex flex-col lg:flex-row pb-4 font-Montserrat"
+      className="h-screen flex flex-col justify-center lg:flex-row pb-4 font-Montserrat"
       id="inicio"
     >
       <div className="flex flex-col lg:px-0 lg:pt-24 lg:w-1/2 gap-4 overflow-y-scroll">

@@ -19,7 +19,7 @@ const Header = () => {
           animationData={animationData}
         ></Lottie>
       </header>
-      <div className="absolute top-7 right-6 z-40">
+      <div className="absolute bottom-9 right-6 z-40">
         <HamburguerMenu />
       </div>
     </div>

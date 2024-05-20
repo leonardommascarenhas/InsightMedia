@@ -14,20 +14,20 @@ export const Noticias = () => {
 
   return (
     <div
-      className="px-4 lg:px-0 lg:h-screen flex flex-col lg:flex-row pb-8 overflow-x-hidden"
+      className="px-4 lg:px-0 h-screen flex flex-col justify-center lg:flex-row pb-8 overflow-x-hidden"
       id="inicio"
     >
       <div className="flex flex-col mt-6 lg:pt-24 lg:w-1/2 gap-4 overflow-y-auto overflow-x-hidden ">
         {noticias?.map(({ title, texto, fotoMobile, subtitulo, date, urlEncoded }, index: number) => (
           <div
             key={index}
-            className="bg-white p-6 lg:p-8 shadow-lg rounded-md flex flex-col md:flex-row gap-3 lg:h-[360px]"
+            className="bg-white p-6 lg:p-8 shadow-xl rounded-md flex flex-col items-center justify-center md:flex-row gap-3 lg:h-[360px]"
           >
             {fotoMobile && fotoMobile.fields && (
               <img
                 src={`https:${fotoMobile.fields.file.url}`}
                 alt={fotoMobile.fields.title}
-                className="max-h-[270px] inline object-cover mb-4 rounded-md"
+                className="max-h-[270px] inline object-cover mb-4 lg:mb-0 lg:mr-4 rounded-md"
               />
             )}
             <div className="flex flex-col">
@@ -43,11 +43,10 @@ export const Noticias = () => {
                   </React.Fragment>
                 ))}
               </p>
-              <Link
-                to={`/noticias/${urlEncoded}`}
-                className="text-blue-500 hover:text-blue-700 transition duration-300 mt-1"
-              >
-                <span className="underline text-sm">Leia Mais</span>
+              <Link to={`/noticias/${urlEncoded}`}>
+                <button className="bg-orange-500 hover:bg-orange-600 transition duration-300 rounded-full px-6 py-3  text-white">
+                  Ler Mais
+                </button>
               </Link>
             </div>
           </div>

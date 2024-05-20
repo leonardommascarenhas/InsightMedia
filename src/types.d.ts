@@ -1,7 +1,9 @@
+import React from "react";
+
 declare global {
   type ColorKey = "mainYellow" | "white";
   type ArrayOfServiceItems = {
-    imgSrc: string;
+    svg: React.ReactNode;
     color: ColorKey;
     title: string;
     description: string;

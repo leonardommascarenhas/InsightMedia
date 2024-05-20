@@ -2,25 +2,25 @@ import ServiceArticle from "./ServiceArticle";
 
 const midiaDigitalPlanning: ArrayOfServiceItems = [
   {
-    imgSrc: "planejamentoDigital/schedule.avif",
+    svg: "schedule",
     color: "mainYellow",
     title: "PLANEJAMENTO",
     description: "Planejamento estratégico de campanhas para awareness ou performance",
   },
   {
-    imgSrc: "planejamentoDigital/infographic.avif",
+    svg: "infographic",
     color: "mainYellow",
     title: "OPERAÇÃO",
     description: "Compra, construção de setup, otimização e análise de performance.",
   },
   {
-    imgSrc: "planejamentoDigital/shield.avif",
+    svg: "shield",
     color: "mainYellow",
     title: "BRAND SAFETY",
     description: "Utilização de ferramentas que garantem a segurança de marca nas veiculações.",
   },
   {
-    imgSrc: "planejamentoDigital/pencil.avif",
+    svg: "pencil",
     color: "mainYellow",
     title: "ANÚNCIOS PERSONALIZADOS",
     description: "Operação de anúncios programáticos de formatos diversos.",
@@ -29,19 +29,19 @@ const midiaDigitalPlanning: ArrayOfServiceItems = [
 
 const dataInteligence: ArrayOfServiceItems = [
   {
-    imgSrc: "InteligenciaDados/DashBoard.avif",
+    svg: "statgraph",
     color: "white",
     title: "DashBoard",
     description: "Para acompanhamento de métricas diárias, com filtros por canais, métricas e períodos",
   },
   {
-    imgSrc: "InteligenciaDados/WebAnalytics.avif",
+    svg: "lupa",
     color: "white",
     title: "Service 6",
     description: "Análise de websites em parâmetros de performance e tagueamento personalizado.",
   },
   {
-    imgSrc: "InteligenciaDados/DataAnalytics.avif",
+    svg: "statlupa",
     color: "white",
     title: "Service 7",
     description: "Ferramentas para análise de audiência, comportamento e consumo.",

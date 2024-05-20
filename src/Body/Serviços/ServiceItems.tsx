@@ -1,11 +1,11 @@
 type ServiceItemsProps = {
-  imgSrc: string;
+  svg: React.ReactNode;
   color: ColorKey;
   title: string;
   description: string;
 };
 
-const ServiceItems = ({ imgSrc, color, title, description }: ServiceItemsProps) => {
+const ServiceItems = ({ svg, color, title, description }: ServiceItemsProps) => {
   const colorClass: Record<ColorKey, string> = {
     mainYellow: "text-mainYellow",
     white: "text-white",
@@ -14,8 +14,8 @@ const ServiceItems = ({ imgSrc, color, title, description }: ServiceItemsProps) 
   return (
     <div className="flex flex-col items-center justify-center text-center p-4 md:p-6 lg:p-8">
       <img
-        src={`/assets/Serviços/${imgSrc}`}
-        className="w-12 h-12 mb-4"
+        src={`/src/assets/svgs/${svg}.svg`}
+        className="w-16 h-16 mb-4"
         alt={title}
       />
       <h3 className={`${colorClass[color]} text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-semibold mb-2`}>
