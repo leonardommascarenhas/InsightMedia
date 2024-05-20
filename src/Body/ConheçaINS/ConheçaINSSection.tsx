@@ -1,11 +1,14 @@
 import NumbersAccomplishedList from "./NumbersAccomplishedList";
-import LogoTopoBlack from '../../assets/svgs/logo_topo_black.svg?react';
+import LogoTopoBlack from "../../assets/svgs/logo_topo_black.svg?react";
 
 const ConheçaINS = () => {
   return (
     <section className="flex flex-col items-center justify-center mb-40">
-      <h2 className="flex items-end gap-3 font-extrabold text-4xl xl:text-5xl 2xl:text-7xl -tracking-widest lg:-tracking-wide text-mainOrange">
-        CONHEÇA A <LogoTopoBlack />
+      <h2 className="flex items-end gap-3 font-extrabold text-3xl md:text-4xl xl:text-5xl 2xl:text-7xl -tracking-widest lg:-tracking-wide text-mainOrange">
+        CONHEÇA A
+        <div className="h-12 md:h-16 xl:h-24">
+          <LogoTopoBlack className="h-full w-fit" />
+        </div>
       </h2>
       <ul className="text-center text-xl lg:text-3xl 2xl:text-4xl my-8 font-medium">
         <li className=" mb-3">

@@ -11,10 +11,16 @@ const Header = () => {
     <div className="fixed w-full top-0 left-0 z-40">
       <header className="relative overflow-hidden flex justify-center items-center p-4 pb-[1.1rem] min-h-20 h-[12vh] w-full bg-white shadow-xl border-b-4 border-solid border-mainOrange">
         <LogoTopoBlack className="h-full" />
-        <Lottie lottieRef={headerBackground} className="absolute -top-10" autoplay loop animationData={animationData}></Lottie>
+        <Lottie
+          lottieRef={headerBackground}
+          className="absolute -top-10"
+          autoplay
+          loop
+          animationData={animationData}
+        ></Lottie>
       </header>
       <div className="absolute top-7 right-6 z-40">
-          <HamburguerMenu />
+        <HamburguerMenu />
       </div>
     </div>
   );

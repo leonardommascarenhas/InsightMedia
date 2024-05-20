@@ -17,7 +17,7 @@ const ServiceArticle = ({
   backgroundMobile,
   title,
   arrayOfServiceItems,
-  id
+  id,
 }: ServiceProps) => {
   const backgrounds: Record<ServiceBackgrounds, string> = {
     planejamentoMidia: "bg-planejamentoMidia",
@@ -36,15 +36,18 @@ const ServiceArticle = ({
 
   return (
     <article
-    id={id}
+      id={id}
       className={`${mobileBackgrounds[backgroundMobile]} md:${backgrounds[backgroundName]} bg-cover bg-center  bg-opacity-20 p-6 flex flex-col md:flex-row items-center justify-center gap-6 text-white min-h-[480px]`}
     >
       <div>
-        <h2 className="w-full md:w-5/12 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold flex">
-          <img src={`/assets/Serviços/${iconImgSrc}`} />
+        <h2 className="w-full md:w-5/12 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold flex items-center gap-4 lg:gap-6">
+          <img
+            src={`/assets/Serviços/${iconImgSrc}`}
+            className="h-12 md:h-16"
+          />
           {title}
         </h2>
-        <p className="text-justify">{description}</p>
+        <p className="mt-4 md:mt-6 lg:mt-8">{description}</p>
       </div>
       <div className={`w-full grid ${gridLayoutClass} justify-center items-center gap-4`}>
         {arrayOfServiceItems &&
