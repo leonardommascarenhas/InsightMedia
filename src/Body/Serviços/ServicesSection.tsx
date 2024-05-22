@@ -79,6 +79,7 @@ const ServicesSection = () => {
         backgroundName="projetoEspecial"
         title="Projetos Especiais"
         id="projetosEspeciais"
+        align="center"
       />
     </section>
   );

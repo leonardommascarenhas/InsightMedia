@@ -8,6 +8,7 @@ interface ServiceProps {
   title: string;
   arrayOfServiceItems?: ArrayOfServiceItems;
   id?: string;
+  align?: "left" | "center" | "right";
 }
 
 const ServiceArticle = ({
@@ -18,6 +19,7 @@ const ServiceArticle = ({
   title,
   arrayOfServiceItems,
   id,
+  align = "left"
 }: ServiceProps) => {
   const backgrounds: Record<ServiceBackgrounds, string> = {
     planejamentoMidia: "bg-planejamentoMidia",
@@ -39,7 +41,7 @@ const ServiceArticle = ({
       id={id}
       className={`${mobileBackgrounds[backgroundMobile]} md:${backgrounds[backgroundName]} bg-cover bg-center  bg-opacity-20 p-6 flex flex-col md:flex-row items-center justify-center gap-6 text-white min-h-[480px]`}
     >
-      <div>
+      <div className={`${align === 'center' ? 'flex flex-col justify-center items-center' : ''}`}>
         <h2 className="w-full md:w-5/12 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold flex items-center gap-4 lg:gap-6">
           <img
             src={`/assets/Serviços/${iconImgSrc}`}
@@ -47,17 +49,16 @@ const ServiceArticle = ({
           />
           {title}
         </h2>
-        <p className="mt-4 md:mt-6 lg:mt-8">{description}</p>
+        <p className={`${align === 'center' ? 'text-center' : ''} mt-4 md:mt-6 lg:mt-8`}>{description}</p>
       </div>
-      <div className={`w-full grid ${gridLayoutClass} justify-center items-center gap-4`}>
-        {arrayOfServiceItems &&
-          arrayOfServiceItems.map((service, index: number) => (
+      {arrayOfServiceItems && <div className={`w-full grid ${gridLayoutClass} justify-center items-center gap-4`}>
+          {arrayOfServiceItems.map((service, index: number) => (
             <ServiceItems
               key={index}
               {...service}
             />
           ))}
-      </div>
+      </div>}
     </article>
   );
 };
