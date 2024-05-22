@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
 type FormData = {
-  name: string;
+  nome: string;
   email: string;
   contact: string;
-  messagem: string;
+  message: string;
 };
 
 // type FormProps = {
@@ -13,14 +13,15 @@ type FormData = {
 
 function ContactForm() {
   const [formData, setFormData] = useState<FormData>({
-    name: "",
+    nome: "",
     email: "",
     contact: "",
-    messagem: "",
+    message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
+    console.log(name, value)
     setFormData({
       ...formData,
       [name]: value,
@@ -43,9 +44,9 @@ function ContactForm() {
           type="text"
           id="nome"
           name="nome"
-          value={formData.name}
+          value={formData.nome}
           onChange={handleChange}
-          className="bg-formGray rounded-3xl p-1"
+          className="bg-formGray rounded-3xl p-3"
         />
         <label htmlFor="email">Email</label>
         <input
@@ -54,7 +55,7 @@ function ContactForm() {
           name="email"
           value={formData.email}
           onChange={handleChange}
-          className="bg-formGray rounded-3xl p-1"
+          className="bg-formGray rounded-3xl p-3"
         />
         <label htmlFor="telefone">Telefone</label>
         <input
@@ -63,16 +64,15 @@ function ContactForm() {
           name="contact"
           value={formData.contact}
           onChange={handleChange}
-          className="bg-formGray rounded-3xl p-1"
+          className="bg-formGray rounded-3xl p-3"
         />
         <label htmlFor="nome">Acrescente algo</label>
-        <input
-          type="textarea"
+        <textarea
           id="message"
           name="message"
-          value={formData.name}
+          value={formData.message}
           onChange={handleChange}
-          className="bg-formGray rounded-3xl py-12"
+          className="bg-formGray rounded-3xl h-32 p-3 resize-none"
         />
         <button
           type="submit"
