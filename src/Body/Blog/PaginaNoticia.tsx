@@ -23,27 +23,20 @@ export const PaginaDaNoticia: React.FC = () => {
   };
 
   const createMarkup = (text: string) => {
-    const escapedText = text.replace(/\\n/g, "<br />");
-    return { __html: escapedText };
+    return text.replace(/\\n/g, "<br />");
   };
 
   return (
     <div
-      className="h-screen flex flex-col justify-center lg:flex-row pb-4 font-Montserrat"
+      className="h-full flex flex-col justify-center mt-32 lg:mt-36 lg:flex-row mb-28 font-Montserrat"
       id="inicio"
     >
-      <div className="flex flex-col lg:px-0 lg:pt-24 lg:w-1/2 gap-4 overflow-y-scroll">
+      <div className="flex flex-col p-6 lg:p-0 lg:w-1/2 h-full gap-4 overflow-y-scroll">
         {selectedNoticia?.map(({ title, texto, fotoDesktop, subtitulo, date }, index) => (
           <div
             key={index}
-            className="bg-white p-6 lg:p-8 shadow-lg rounded-md"
+            className="bg-white p-6 lg:p-8 shadow-lg rounded-md border-solid border-[1px] border-gray-200"
           >
-            <button
-              onClick={handleClick}
-              className="text-blue-500 underline mb-4"
-            >
-              {"<"} Voltar
-            </button>
             {fotoDesktop && fotoDesktop.fields && (
               <img
                 src={`https:${fotoDesktop.fields.file.url}`}
@@ -55,13 +48,17 @@ export const PaginaDaNoticia: React.FC = () => {
             <h3 className="text-lg font-medium text-gray-600 mb-2">{subtitulo}</h3>
             <p className="text-gray-700 text-xs">{new Date(date).toLocaleDateString()}</p>
             <p className="text-gray-700 mb-4 text-xs">{formatTime(date)}</p>
-            <div className="text-gray-800">
-              <div
-                className="text-gray-800"
-                dangerouslySetInnerHTML={createMarkup(texto)}
-              />
-            </div>
+            <p className="text-gray-800">
+              {createMarkup(texto)}
+            </p>
+            <button
+              onClick={handleClick}
+              className="bg-orange-500 hover:bg-orange-600 transition duration-300 rounded-full px-6 py-3  text-white mt-4"
+            >
+              {"<"} Voltar
+            </button>
           </div>
+          
         ))}
       </div>
     </div>
