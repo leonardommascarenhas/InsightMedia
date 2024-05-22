@@ -1,17 +1,20 @@
 import Lottie, { LottieRefCurrentProps } from "lottie-react";
 import animationData from "../assets/animations/hamburguer_menu.json";
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const HamburguerMenu = () => {
   const menuItems = [
-    { title: "CONHEÇA A INS", link: "conhecaINS" },
-    { title: "TRADING", link: "planejamentoDigital" },
-    { title: "INTELIGÊNCIA DE DADOS", link: "inteligenciaDados" },
-    { title: "PROJETOS ESPECIAIS", link: "projetosEspeciais" },
-    { title: "FALE CONOSCO", link: "faleConosco" },
+    { title: "CONHEÇA A INS", link: "#conhecaINS" },
+    { title: "TRADING", link: "#planejamentoDigital" },
+    { title: "INTELIGÊNCIA DE DADOS", link: "#inteligenciaDados" },
+    { title: "PROJETOS ESPECIAIS", link: "#projetosEspeciais" },
+    { title: "FALE CONOSCO", link: "#faleConosco" },
+    { title: "NOTICIAS", link: "/noticias" },
   ];
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef<LottieRefCurrentProps>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (isOpen) {
@@ -35,6 +38,18 @@ const HamburguerMenu = () => {
 
   const handleMouseLeave = () => {
     setIsOpen(false);
+  };
+
+  const handleNavigation = (link: string) => {
+    toggleMenu();
+    if (link === "/noticias") {
+      navigate(link);
+    } else {
+      navigate("/", { replace: true });
+      setTimeout(() => {
+        window.location.hash = link;
+      }, 100);
+    }
   };
 
   return (
@@ -61,8 +76,8 @@ const HamburguerMenu = () => {
             className="transition-all duration-200 text-white hover:text-orange-600 font-black whitespace-nowrap py-1 text-xl"
           >
             <a
-              href={`#${link}`}
-              onClick={toggleMenu}
+              href="#"
+              onClick={() => handleNavigation(link)}
             >
               {title}
             </a>
