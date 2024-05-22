@@ -2,25 +2,25 @@ import ServiceArticle from "./ServiceArticle";
 
 const midiaDigitalPlanning: ArrayOfServiceItems = [
   {
-    svg: "schedule",
+    svg: "planejamentoDigital/schedule",
     color: "mainYellow",
     title: "PLANEJAMENTO",
     description: "Planejamento estratégico de campanhas para awareness ou performance",
   },
   {
-    svg: "infographic",
+    svg: "planejamentoDigital/infographic",
     color: "mainYellow",
     title: "OPERAÇÃO",
     description: "Compra, construção de setup, otimização e análise de performance.",
   },
   {
-    svg: "shield",
+    svg: "planejamentoDigital/shield",
     color: "mainYellow",
     title: "BRAND SAFETY",
     description: "Utilização de ferramentas que garantem a segurança de marca nas veiculações.",
   },
   {
-    svg: "pencil",
+    svg: "planejamentoDigital/pencil",
     color: "mainYellow",
     title: "ANÚNCIOS PERSONALIZADOS",
     description: "Operação de anúncios programáticos de formatos diversos.",
@@ -29,19 +29,19 @@ const midiaDigitalPlanning: ArrayOfServiceItems = [
 
 const dataInteligence: ArrayOfServiceItems = [
   {
-    svg: "statgraph",
+    svg: "InteligenciaDados/DashBoard",
     color: "white",
     title: "DashBoard",
     description: "Para acompanhamento de métricas diárias, com filtros por canais, métricas e períodos",
   },
   {
-    svg: "lupa",
+    svg: "InteligenciaDados/lupa",
     color: "white",
     title: "Service 6",
     description: "Análise de websites em parâmetros de performance e tagueamento personalizado.",
   },
   {
-    svg: "statlupa",
+    svg: "InteligenciaDados/DataAnalytics",
     color: "white",
     title: "Service 7",
     description: "Ferramentas para análise de audiência, comportamento e consumo.",

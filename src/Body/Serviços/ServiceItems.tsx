@@ -14,7 +14,7 @@ const ServiceItems = ({ svg, color, title, description }: ServiceItemsProps) => 
   return (
     <div className="flex flex-col items-center justify-center text-center p-4 md:p-6 lg:p-8">
       <img
-        src={`/src/assets/svgs/${svg}.svg`}
+        src={`/assets/Serviços/${svg}.svg`}
         className="w-16 h-16 mb-4"
         alt={title}
       />
