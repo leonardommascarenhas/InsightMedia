@@ -16,11 +16,13 @@ const Footer = () => {
         </div>
         <ContactForm />
       </div>
-      <footer className="pt-8 pb-4 text-white flex justify-center items-center flex-col text-xs bg-zinc-900">
-        Imaginado por:
-        <a className="flex justify-center items-center" href="https://wa.me/5571997404701?text=Ol%C3%A1%21%20Gostaria%20de%20tornar%20minha%20ideia%20de%20site%2Faplicativo%20em%20realidade%21">
-          <EFCLogo className="w-full h-8 m-4" />
-        </a>
+      <footer className="pt-8 pb-4 text-white flex justify-center items-start flex-col text-xs bg-zinc-900">
+        <div className="flex justify-center items-center flex-col ml-7">
+          Criado por:
+          <a className="flex justify-center items-center" href="https://wa.me/5571997404701?text=Ol%C3%A1%21%20Gostaria%20de%20tornar%20minha%20ideia%20de%20site%2Faplicativo%20em%20realidade%21">
+            <EFCLogo className="w-full h-8 m-4" />
+          </a>
+        </div>
       </footer>
     </div>
   );

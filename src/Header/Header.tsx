@@ -1,25 +1,33 @@
 // Header.jsx
 import HamburguerMenu from "./HamburguerMenu";
-import LogoTopoBlack from "../assets/svgs/logo_topo_black.svg?react";
 import Lottie, { LottieRefCurrentProps } from "lottie-react";
-import animationData from "../assets/animations/background_insight.json";
+import backgroundAnimation from "../assets/animations/background_insight.json";
+import logoAnimation from "../assets/animations/logo_anim.json";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  const headerBackground = useRef<LottieRefCurrentProps>(null);
+  const headerBackgroundRef = useRef<LottieRefCurrentProps>(null);
+  const logoAnimationRef = useRef<LottieRefCurrentProps>(null);
   return (
     <div className="fixed w-full top-0 left-0 z-40">
       <header className="relative overflow-hidden flex justify-center items-center p-4 pb-[1.1rem] min-h-20 h-[12vh] w-full bg-white shadow-xl border-b-4 border-solid border-mainOrange">
-        <Link to={'/'} className="h-full">
-          <LogoTopoBlack className="h-full" />
+        <Link to={'/'} className="h-full w-full relative flex justify-center items-center">
+          <Lottie
+            lottieRef={logoAnimationRef}
+            className="h-[400%] w-auto absolute -top-[150%]"
+            animationData={logoAnimation}
+            onMouseEnter={() => logoAnimationRef.current?.goToAndPlay(0)}
+            autoplay={true}
+            loop={false}
+          ></Lottie>
         </Link>
         <Lottie
-          lottieRef={headerBackground}
+          lottieRef={headerBackgroundRef}
           className="hidden md:block absolute -top-10 pointer-events-none"
           autoplay
           loop
-          animationData={animationData}
+          animationData={backgroundAnimation}
         ></Lottie>
       </header>
       <div className="absolute top-5 right-5 z-40 md:top-6">
